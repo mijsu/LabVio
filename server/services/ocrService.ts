@@ -31,7 +31,8 @@ export async function extractTextFromImage(imageBuffer: Buffer, labType?: string
 
     console.log(`Processing image: ${imageBuffer.length} bytes`);
 
-    // Run OCR with timeout protection (20s for faster processing)
+    // Run OCR with timeout protection
+    // Increased timeout for complex images like urinalysis (40s)
     const { data } = await Promise.race([
       Tesseract.recognize(imageBuffer, 'eng', {
         logger: (m) => {
@@ -41,7 +42,7 @@ export async function extractTextFromImage(imageBuffer: Buffer, labType?: string
         },
       }),
       new Promise<never>((_, reject) => 
-        setTimeout(() => reject(new Error('OCR processing timeout (20s)')), 20000)
+        setTimeout(() => reject(new Error('OCR processing timeout (40s)')), 40000)
       )
     ]);
 
