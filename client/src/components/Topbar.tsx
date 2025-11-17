@@ -40,7 +40,7 @@ export default function Topbar() {
       >
         <div className="container mx-auto px-4 h-full flex items-center justify-between max-w-7xl">
           {/* Logo & Brand */}
-          <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity" data-testid="link-home-logo">
+          <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity text-foreground" data-testid="link-home-logo">
             <div className="w-11 h-11 rounded-xl shadow-lg shadow-primary-500/40 flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-primary-500 to-primary-600 overflow-hidden">
               <div
                 aria-hidden
@@ -52,11 +52,11 @@ export default function Topbar() {
                   maskRepeat: 'no-repeat',
                   WebkitMaskSize: 'contain',
                   maskSize: 'contain',
-                  backgroundColor: 'white',
+                  backgroundColor: 'currentColor',
                 }}
               />
             </div>
-            <span className="font-bold text-xl bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent hidden sm:inline">
+            <span className="font-bold text-xl text-foreground hidden sm:inline drop-shadow">
               LabVio
             </span>
           </Link>

@@ -37,9 +37,9 @@ export default function SignInPage() {
     <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-background via-background to-primary-50 dark:to-primary-950">
       <div className="w-full max-w-md">
         {/* Logo */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center mb-8 text-foreground">
           <div className="flex items-center gap-2.5">
-              <div className="w-14 h-14 rounded-xl shadow-lg shadow-primary-500/40 flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-primary-500 to-primary-600 overflow-hidden">
+            <div className="w-14 h-14 rounded-xl shadow-lg shadow-primary-500/40 flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-primary-500 to-primary-600 overflow-hidden">
               <div
                 aria-hidden
                 className="w-full h-full p-2"
@@ -50,11 +50,11 @@ export default function SignInPage() {
                   maskRepeat: 'no-repeat',
                   WebkitMaskSize: 'contain',
                   maskSize: 'contain',
-                  backgroundColor: 'white',
+                  backgroundColor: 'currentColor',
                 }}
               />
             </div>
-            <span className="font-bold text-2xl bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
+            <span className="font-bold text-2xl text-foreground drop-shadow">
               LabVio
             </span>
           </div>
