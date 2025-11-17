@@ -54,7 +54,19 @@ export default function SignUpPage() {
         <div className="flex justify-center mb-8">
           <div className="flex items-center gap-2.5">
             <div className="w-14 h-14 rounded-xl shadow-lg shadow-primary-500/40 flex items-center justify-center flex-shrink-0 bg-gradient-to-br from-primary-500 to-primary-600 overflow-hidden">
-              <img src="/labvio-high-resolution-logo.png?v=3" alt="LabVio Logo" className="w-full h-full object-contain p-2 filter invert" />
+              <div
+                aria-hidden
+                className="w-full h-full p-2"
+                style={{
+                  WebkitMaskImage: "url('/labvio-high-resolution-logo.png?v=3')",
+                  maskImage: "url('/labvio-high-resolution-logo.png?v=3')",
+                  WebkitMaskRepeat: 'no-repeat',
+                  maskRepeat: 'no-repeat',
+                  WebkitMaskSize: 'contain',
+                  maskSize: 'contain',
+                  backgroundColor: 'white',
+                }}
+              />
             </div>
             <span className="font-bold text-2xl bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
               LabVio
