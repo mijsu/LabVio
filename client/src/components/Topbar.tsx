@@ -40,11 +40,11 @@ export default function Topbar() {
       >
         <div className="container mx-auto px-4 h-full flex items-center justify-between max-w-7xl">
           {/* Logo & Brand */}
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity" data-testid="link-home-logo">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center shadow-lg shadow-primary-500/30">
-              <Activity className="w-6 h-6 text-white" />
+          <Link href="/" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity" data-testid="link-home-logo">
+            <div className="w-11 h-11 rounded-xl shadow-lg shadow-primary-500/40 flex items-center justify-center flex-shrink-0">
+              <img src="/logo.svg" alt="MEDiscan Logo" className="w-full h-full" />
             </div>
-            <span className="font-bold text-xl bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
+            <span className="font-bold text-xl bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent hidden sm:inline">
               MEDiscan
             </span>
           </Link>
