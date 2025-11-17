@@ -57,7 +57,7 @@ export default function Topbar() {
               </svg>
             </div>
             <span className="font-bold text-xl bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent hidden sm:inline">
-              MEDiscan
+              LabVio
             </span>
           </Link>
 

@@ -18,7 +18,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     const root = document.documentElement;
     root.classList.remove("light", "dark");
     root.classList.add("dark");
-    localStorage.setItem("mediscan-theme", "dark");
+    localStorage.setItem("labvio-theme", "dark");
   }, []);
 
   // Theme toggle disabled - always dark mode

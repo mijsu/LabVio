@@ -64,7 +64,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const result = await createUserWithEmailAndPassword(auth, email, password);
       toast({
         title: "Account created!",
-        description: `Welcome to MEDiscan, ${result.user.email}`,
+        description: `Welcome to LabVio, ${result.user.email}`,
       });
     } catch (error: any) {
       const message = error.code === "auth/email-already-in-use"

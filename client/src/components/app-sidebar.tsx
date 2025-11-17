@@ -87,7 +87,7 @@ export function AppSidebar() {
             </svg>
           </div>
           <div>
-            <h2 className="text-lg font-bold">MEDiscan</h2>
+            <h2 className="text-lg font-bold">LabVio</h2>
             <p className="text-xs text-muted-foreground">Health Analysis</p>
           </div>
         </div>

@@ -55,7 +55,7 @@ export default function SignInPage() {
               </svg>
             </div>
             <span className="font-bold text-2xl bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent">
-              MEDiscan
+              LabVio
             </span>
           </div>
         </div>
