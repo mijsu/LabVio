@@ -285,11 +285,11 @@ export default function UploadPage() {
                       <Button
                         variant="destructive"
                         size="icon"
-                        className="absolute top-2 right-2 h-8 w-8 rounded-full shadow-lg"
+                        className="absolute top-1 right-1 h-9 w-9 rounded-full shadow-lg z-30 ring-2 ring-white/80 dark:ring-black/60 border border-white/20"
                         onClick={removeFile}
                         data-testid="button-remove-file"
                       >
-                        <X className="h-4 w-4" />
+                        <X className="h-5 w-5" />
                       </Button>
                     </div>
 

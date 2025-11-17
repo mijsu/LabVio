@@ -150,9 +150,11 @@ export default function HomePage() {
                 </Button>
               </Link>
             ) : (
-              <Button size="lg" onClick={signInWithGoogle} className="text-lg px-8 shadow-xl" data-testid="button-sign-in">
-                Get Started Free
-              </Button>
+              <Link href="/signup">
+                <Button size="lg" className="text-lg px-8 shadow-xl" data-testid="button-sign-up">
+                  Get Started Free
+                </Button>
+              </Link>
             )}
             <Link href="/tips">
               <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 backdrop-blur-md border-white/20 text-white hover:bg-white/20" data-testid="button-learn-more">
@@ -253,9 +255,11 @@ export default function HomePage() {
               </Button>
             </Link>
           ) : (
-            <Button size="lg" variant="secondary" onClick={signInWithGoogle} className="text-lg px-8" data-testid="button-cta-sign-in">
-              Get Started for Free
-            </Button>
+            <Link href="/signup">
+              <Button size="lg" variant="secondary" className="text-lg px-8" data-testid="button-cta-sign-up">
+                Get Started for Free
+              </Button>
+            </Link>
           )}
         </div>
       </section>
