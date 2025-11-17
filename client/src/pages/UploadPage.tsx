@@ -274,7 +274,7 @@ export default function UploadPage() {
                 ) : (
                   <div className="space-y-4">
                     {/* File Preview */}
-                    <div className="relative rounded-2xl overflow-hidden border-2 border-border bg-muted/30">
+                    <div className="relative rounded-2xl overflow-visible border-2 border-border bg-muted/30">
                       {previewUrl && (
                         <img
                           src={previewUrl}
@@ -285,11 +285,11 @@ export default function UploadPage() {
                       <Button
                         variant="destructive"
                         size="icon"
-                        className="absolute top-3 right-3 h-10 w-10 rounded-full shadow-lg z-30 ring-2 ring-white/80 dark:ring-black/60 border border-white/20 hover:scale-110 transition-transform"
+                        className="absolute -top-2 -right-2 h-11 w-11 rounded-full shadow-xl z-50 ring-2 ring-white/90 dark:ring-black/80 border border-white/30 hover:scale-125 transition-transform"
                         onClick={removeFile}
                         data-testid="button-remove-file"
                       >
-                        <X className="h-5 w-5" />
+                        <X className="h-6 w-6" />
                       </Button>
                     </div>
 
