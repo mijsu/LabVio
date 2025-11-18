@@ -1267,8 +1267,16 @@ export default function AnalysisResultModal({
                     </div>
                     
                     {/* Google Maps with Directions */}
-                    <div className="mb-2">
-                      <p className="text-xs sm:text-sm text-muted-foreground">Nearest Recommended Hospital</p>
+                    <div className="mb-3">
+                      <div className="flex items-center gap-3 p-3 rounded-md bg-gradient-to-br from-background/50 to-background/30 border border-border/30">
+                        <div className="h-8 w-8 rounded-md bg-amber-500/10 flex items-center justify-center">
+                          <MapPin className="h-4 w-4 text-amber-600" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-foreground">Nearest Recommended Hospital</p>
+                          <p className="text-xs text-muted-foreground">Based on proximity to your location</p>
+                        </div>
+                      </div>
                     </div>
                     <div className="rounded-lg overflow-hidden border border-border/50 bg-muted/20">
                       <iframe
