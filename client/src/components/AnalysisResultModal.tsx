@@ -132,6 +132,7 @@ const getRiskConfig = (riskLevel: string) => {
   }
 };
 
+// Process lab values for charts
 // Normal ranges for lab values
 const LAB_NORMAL_RANGES = {
   wbc: { min: 4.5, max: 11.0, unit: "K/uL", name: "WBC" },
@@ -148,49 +149,32 @@ const LAB_NORMAL_RANGES = {
 
 // Normalize lab value to health score (100 = optimal, 0 = critically abnormal)
 function normalizeLabValue(value: number, min: number, max: number): number {
-  // If value is within normal range, it's 100 (perfect health)
-  if (value >= min && value <= max) {
-    return 100;
-  }
-  
-  // If value is below normal range
+  if (value >= min && value <= max) return 100;
   if (value < min) {
     const percentBelow = ((min - value) / min) * 100;
-    // Score decreases with deviation, can approach 0 for extreme values
     const score = 100 - percentBelow;
     return Math.max(0, score);
   }
-  
-  // If value is above normal range
   if (value > max) {
     const percentAbove = ((value - max) / max) * 100;
-    // Score decreases with deviation, can approach 0 for extreme values
     const score = 100 - percentAbove;
     return Math.max(0, score);
   }
-  
   return 100;
 }
 
 // Calculate risk contribution from a lab value (0-100 scale)
 function calculateRiskContribution(value: number, min: number, max: number): number {
-  // Only contribute to risk if outside normal range
-  if (value >= min && value <= max) {
-    return 0;
-  }
-  
+  if (value >= min && value <= max) return 0;
   if (value < min) {
-    // Below normal range - contribution increases with deviation
     const percentBelow = ((min - value) / min) * 100;
     return Math.min(percentBelow, 100);
   } else {
-    // Above normal range - contribution increases with deviation
     const percentAbove = ((value - max) / max) * 100;
     return Math.min(percentAbove, 100);
   }
 }
 
-// Process lab values for charts
 function processLabDataForCharts(parsedValues: Record<string, string | number>) {
   const radarData: Array<{ subject: string; value: number; fullMark: 100 }> = [];
   const barData: Array<{ name: string; contribution: number; color: string }> = [];
