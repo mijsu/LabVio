@@ -1183,7 +1183,7 @@ export default function AnalysisResultModal({
                           <div className="h-7 w-7 sm:h-8 sm:w-8 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0">
                             <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-white" />
                           </div>
-                          <span className="truncate">Nearest Recommended Hospital</span>
+                          <span className="truncate">Best Hospital</span>
                         </CardTitle>
                         <CardDescription className="mt-1 sm:mt-2 text-xs sm:text-sm">
                           {locationStatus === 'found' && 'Based on your current location and analysis'}
@@ -1283,6 +1283,9 @@ export default function AnalysisResultModal({
                     </div>
                     
                     {/* Google Maps with Directions */}
+                    <div className="mb-2">
+                      <p className="text-xs sm:text-sm text-muted-foreground">Nearest Recommended Hospital</p>
+                    </div>
                     <div className="rounded-lg overflow-hidden border border-border/50 bg-muted/20">
                       <iframe
                         width="100%"
