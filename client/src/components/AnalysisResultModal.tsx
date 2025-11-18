@@ -25,6 +25,7 @@ import {
   Dumbbell,
   Stethoscope,
   ArrowRight,
+  ArrowUp,
   X,
   FileText,
   AlertTriangle,
@@ -844,13 +845,13 @@ export default function AnalysisResultModal({
                                 >
                                   {lab.status === 'normal' && <CheckCircle2 className="h-3 w-3 mr-1" />}
                                   {lab.status === 'borderline' && <AlertCircle className="h-3 w-3 mr-1" />}
-                                  {lab.status === 'abnormal' && <AlertTriangle className="h-3 w-3 mr-1" />}
-                                  {lab.status.charAt(0).toUpperCase() + lab.status.slice(1)}
+                                  {lab.status === 'abnormal' && <ArrowUp className="h-3 w-3 mr-1" />}
+                                  {lab.status === 'abnormal' ? 'Elevate' : lab.status.charAt(0).toUpperCase() + lab.status.slice(1)}
                                 </Badge>
                               </div>
                               <div className="flex items-center gap-2 sm:gap-4 text-xs text-muted-foreground mb-2 flex-wrap">
                                 <span className="font-medium">Value: <span className="text-foreground">{lab.value}</span></span>
-                                <span className="text-xs">Normal: {lab.normalRange}</span>
+                                <span className="text-xs">Normal: {lab.parameter && lab.parameter.toLowerCase() === 'ph' ? '7' : lab.normalRange}</span>
                               </div>
                             </div>
                           </div>
