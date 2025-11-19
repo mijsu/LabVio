@@ -17,8 +17,8 @@ import { useAuth } from "@/contexts/AuthContext";
 const features = [
   {
     icon: Upload,
-    title: "Easy Upload & Scan",
-    description: "Upload existing lab results or scan them directly using your device camera with guided overlays",
+    title: "Easy Upload",
+    description: "Upload existing lab results (blood tests, urinalysis, lipid profile)",
   },
   {
     icon: Brain,
@@ -50,8 +50,8 @@ const features = [
 const steps = [
   {
     number: "1",
-    title: "Upload or Scan",
-    description: "Take a photo or upload your lab results (X-rays, blood tests, urinalysis)",
+    title: "Upload a File",
+    description: "Take a photo or upload your lab results (blood tests, urinalysis, lipid profile)",
   },
   {
     number: "2",
